@@ -85,6 +85,8 @@ export const serverless = (appFn: string | ApplicationFunction) => {
       }
     } catch (err) {
       console.error('Could not deserialize body into JSON');
+      res.end(JSON.stringify(err));
+      return;
     }
   };
 };
