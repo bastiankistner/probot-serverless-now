@@ -4,7 +4,7 @@
     "lib": ["es2017"],
     "declaration": true,
     "noUnusedParameters": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "skipLibCheck": true,

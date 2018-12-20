@@ -1,3 +1,7 @@
+process.env.APP_ID = 'MY_APP_ID';
+
+process.env.WEBHOOK_SECRET = 'MY_WEBHOOK_SECRET';
+
 // This is a fake key generated for www.example.com
 process.env.PRIVATE_KEY = `-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAuKKQtSoihtvoN2ewvJh2sBriQ6aMqS59yrOdwXhNIp1PfX0U

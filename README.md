@@ -2,7 +2,7 @@
 
 A [Probot](https://github.com/probot/probot) extension to make it easier to run your Probot Apps serverless on now.sh v2.
 
-This extension is based on [`@probot/serverless-lambda`](https://github.com/probot/serverless-lambda)
+This extension is based on [`@probot/serverless-lambda`](https://github.com/probot/serverless-lambda) and uses much of its code.
 
 ## Usage
 
@@ -12,18 +12,18 @@ $ npm install @probot/serverless-lambda
 
 ```typescript
 // index.js
-import { serverless } from "@sanalytics/probot-serverless-now";
-import app from "./app";
+import { serverless } from '@sanalytics/probot-serverless-now';
+import app from './app';
 
 export default serverless(app);
 ```
 
 ```typescript
 // app.js
-import { Application } from "probot";
+import { Application } from 'probot';
 
 export default (app: Application) => {
-  app.on("issues.opened", async context => {
+  app.on('issues.opened', async context => {
     // A new issue was opened, what should we do with it?
     context.log(context.payload);
   });
