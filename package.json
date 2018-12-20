@@ -1,6 +1,6 @@
 {
   "name": "@sanalytics/probot-serverless-now",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An extension for running Probot on now.sh v2",
   "main": "dist/index.js",
   "scripts": {
