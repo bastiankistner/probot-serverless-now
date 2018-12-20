@@ -34,12 +34,18 @@ export default (app: Application) => {
 
 This package moves the functionality of `probot run` into a handler suitable for usage on now.sh v2. Follow the documentation on [Environment Configuration](https://probot.github.io/docs/configuration/) to setup your app's environment variables. You can add these to `.env`, but for security reasons you may want to use the [now CLI](https://zeit.co/docs/v2/deployments/environment-variables-and-secrets/) to set Environment Variables for the function so you don't have to include any secrets in the deployed package.
 
-For the private key, since now.sh environment variables / secrets cannot be multiline strings, you could [Base64 encode](https://nodejs.org/api/buffer.html#buffer_buffers_and_character_encodings) the `.pem` file you get from the GitHub App or use [now cli](now secret add my-github-app-private-key "\$(cat my-keyfile | base64)") to encrypt and store the key. Then in `now.json` put
+Since you might run into issues with limits related to now.sh environment variables and secrets, just use the pem keyfile (or create one using the key included in your `.env` file where all `\n` are replaced with actual new lines) together with `now-cli`:
+
+```sh
+now secret add private_key "$(cat key.pem | base64)"
+```
+
+Then set the environment variable `PRIVATE_KEY` either in your `now.json` as shown below or in your deploy command with `now -e PRIVATE_KEY="@private_key@`
 
 ```json
 {
   "env": {
-    "my-github-app-private-key": "@my-github-app-private-key"
+    "PRIVATE_KEY": "@private_key"
   }
 }
 ```
