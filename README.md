@@ -7,7 +7,7 @@ This extension is based on [`@probot/serverless-lambda`](https://github.com/prob
 ## Usage
 
 ```shell
-$ npm install @probot/serverless-lambda
+$ npm install @sanalytics/probot-serverless-now
 ```
 
 ```typescript
