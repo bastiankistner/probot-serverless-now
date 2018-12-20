@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2017"],
+    "declaration": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "noEmitOnError": false,
+    "noLib": false,
+    "noUnusedLocals": true,
+    "strict": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/types/*", "@types/*", "types/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
