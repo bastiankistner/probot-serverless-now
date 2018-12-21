@@ -15,7 +15,11 @@ $ npm install @sanalytics/probot-serverless-now
 import { serverless } from '@sanalytics/probot-serverless-now';
 import app from './app';
 
-export default serverless(app);
+// the following is different from serverless-lambda, as the current working directory does not contain the package.json on now.sh v2
+import { name as appName, version as appVersion } from '../package.json';
+
+// make sure to pass appName and appVersion
+export default serverless(app, appName, appVersion);
 ```
 
 ```typescript
