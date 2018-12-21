@@ -39,12 +39,12 @@ const loadProbot = (appFn: string | ApplicationFunction) => {
   return probot;
 };
 
-export const serverless = (appFn: string | ApplicationFunction) => {
+export const serverless = (appFn: string | ApplicationFunction, appName: string, appVersion: string) => {
   return async (req: IncomingMessage, res: ServerResponse) => {
     if (req.method === 'GET' && req.url === '/probot') {
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/html');
-      res.end(template);
+      res.end(template(appName, appVersion));
       return;
     }
 

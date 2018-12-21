@@ -26,10 +26,14 @@ describe('serverless-now', () => {
 
     spy = jest.fn();
 
-    handler = serverless(async app => {
-      app.auth = () => Promise.resolve({}) as Promise<GitHubAPI>;
-      app.on('issues', spy);
-    });
+    handler = serverless(
+      async app => {
+        app.auth = () => Promise.resolve({}) as Promise<GitHubAPI>;
+        app.on('issues', spy);
+      },
+      'app',
+      '1.0'
+    );
   });
 
   it('responds with the homepage', async () => {

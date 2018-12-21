@@ -1,13 +1,11 @@
-const packageJson = require(`${process.cwd()}/package`);
-
-export const template = `
+export const template = (appName: string, appVersion: string) => `
 <!DOCTYPE html>
 <html lang="en" class="height-full">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>${packageJson.name} | built with Probot</title>
+    <title>${appName} | built with Probot</title>
     <link rel="stylesheet" href="https://probot.github.io/assets/css/index.css?d=1521919566">
   </head>
   <body class="height-full bg-gray-light">
@@ -15,8 +13,8 @@ export const template = `
       <img src="https://probot.github.io/assets/logo.png" alt="Probot Logo" width="100" class="mb-6">
       <div class="box-shadow rounded-2 border p-6 bg-white">
         <h1>
-          Welcome to ${packageJson.name}!
-          <span class="Label Label--outline v-align-middle ml-2 text-gray-light">v${packageJson.version}</span>
+          Welcome to ${appName}!
+          <span class="Label Label--outline v-align-middle ml-2 text-gray-light">v${appVersion}</span>
         </h1>
         <p>This bot was built using <a href="https://github.com/probot/probot">Probot</a>, a framework for building GitHub Apps.</p>
       </div>
