@@ -54,6 +54,14 @@ Then set the environment variable `PRIVATE_KEY` either in your `now.json` as sho
 }
 ```
 
+To decode the private key during your app startup, use node's `Buffer.from` before you initalize your app:
+
+```
+process.env.PRIVATE_KEY = Buffer.from(process.env.PRIVATE_KEY, "base64").toString(
+  "binary"
+);
+```
+
 ## Differences from `probot run`
 
 #### Local Development
