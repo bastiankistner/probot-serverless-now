@@ -1,6 +1,6 @@
 
 ----
-👉 use [`probot-serverless-now`](`https://github.com/tibdex/probot-serverless-now#readme`) instead !
+👉 use [`probot-serverless-now`](https://github.com/tibdex/probot-serverless-now#readme) instead !
 ----
 
 ## now.sh extension for Probot
