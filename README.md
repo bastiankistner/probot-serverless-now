@@ -1,3 +1,8 @@
+
+----
+👉 use [`probot-serverless-now`](`https://github.com/tibdex/probot-serverless-now#readme`) instead !
+----
+
 ## now.sh extension for Probot
 
 A [Probot](https://github.com/probot/probot) extension to make it easier to run your Probot Apps serverless on now.sh v2.
